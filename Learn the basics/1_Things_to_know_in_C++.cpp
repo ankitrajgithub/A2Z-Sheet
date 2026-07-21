@@ -2,6 +2,39 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+void printName(){
+    cout<<"Hey!! Ankit"<<endl;
+}
+
+void printNames(string name){
+    cout<<"Hey!! "<<name<<endl;
+}
+
+//Take two numbers and print its sum
+int sum(int num1,int num2){
+    int num3=num1+num2;
+    return num3;
+}
+
+void doSomething(int num){
+    cout<<num<<endl;
+    num+=5;
+    cout<<num<<endl;
+    num+=5;
+    cout<<num<<endl;
+    num+=5;
+}
+
+void doSomethingWithString(string &s){
+    s[0]='T';
+    cout<<s<<endl;
+}
+
+void doSomethingWithArray(int arrs[],int n){
+    arrs[0]+=100;
+    cout<<"Value inside function : "<<arrs[0]<<endl;
+}
+
 int main(){
 
     //User Input / Output
@@ -175,6 +208,49 @@ int main(){
         cout<<"Ankit Raj"<<endl;
         i=i-1;
     }while(i>=1);
+
+    //Functions
+    /*
+    Functions are set of code which performs something for you.
+    Functions are used to modularize code.
+    Functions are used to increase readability.
+    Functions are used to use same code multiple times.
+    void->which does not return anything, return, parameterised, non-parameterised
+    */
+    printName();
+
+    string names;
+    cin>>names;
+    printNames(names);
+
+    int num1,num2;
+    cin>>num1>>num2;
+    int res=sum(num1,num2);
+    cout<<res<<endl;
+
+    int minimum=min(num1,num2);
+    int maximum=max(num1,num2);
+
+    //Pass by Value
+    int num=10;
+    doSomething(num);
+    cout<<num<<endl;
+
+    //Pass by Reference
+    string s4="Raj";
+    doSomethingWithString(s4);
+    cout<<s4<<endl;
+
+    int arrs[5];
+    int n=5;
+    for(int i=0;i<=4;i++){
+        cin>>arrs[i];
+    }
+    doSomethingWithArray(arrs,n);
+    cout<<"Value outside function : "<<arrs[0]<<endl;
+    for(int i=0;i<=4;i++){
+        cout<<arrs[i]<<endl;
+    }
 
     return 0;
 }
