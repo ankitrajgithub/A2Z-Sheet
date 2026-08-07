@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Print name 5 times
+// Print name 5 times
 void name(int i,int n){
     if(i>n){
         cout<<endl;
@@ -11,7 +11,7 @@ void name(int i,int n){
     name(i+1,n);
 }
 
-//Print linearly from 1 to N 
+// Print linearly from 1 to N 
 void print1ToN(int i,int n){
     if(i>n){
         cout<<endl;
@@ -21,7 +21,7 @@ void print1ToN(int i,int n){
     print1ToN(i+1,n);
 }
 
-//Print from N to 1
+// Print from N to 1
 void printNTo1(int i,int n){
     if(i<1){
         cout<<endl;
@@ -40,7 +40,7 @@ void print1ToNBacktracking(int i,int n){
     cout<<i<<" ";
 }
 
-//Print from N to 1 (By Backtracking)
+// Print from N to 1 (By Backtracking)
 void printNTo1Backtracking(int i,int n){
     if(i>n){
         cout<<endl;
