@@ -18,5 +18,4 @@ int main(){
     int a=f(n);
     cout<<a<<endl;
 
-
 }
