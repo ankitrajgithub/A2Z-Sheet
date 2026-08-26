@@ -36,7 +36,7 @@ Bubble Sort-
 */
 
 void bubbleSorting(int arr[],int n){ // Time Complexity - O(n^2), Best Case - O(n)
-    for(int i=n-1;i>=0;i--){
+    for(int i=n-1;i>0;i--){
         int flag=true;
         for(int j=0;j<=i-1;j++){
             if(arr[j]>arr[j+1]){
