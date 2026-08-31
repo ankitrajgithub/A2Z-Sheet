@@ -28,6 +28,29 @@ Here element 5 is not smaller than or equal to its future elements.
 #include<bits/stdc++.h>
 using namespace std;
 
+bool checkIfSorted(int arr[],int n){
+    for(int i=0;i<n-1;i++){
+        if(arr[i]>arr[i+1]){
+            return false;
+        }
+    }
+    return true;
+}
+
 int main(){
-    
+    int n;
+    cin>>n;
+    int arr[n];
+
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+
+    bool check=checkIfSorted(arr,n);
+
+    if(check){
+        cout<<"It is a sorted array";
+    }else{
+        cout<<"It is not sorted array";
+    }
 }

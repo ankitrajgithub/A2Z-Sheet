@@ -62,7 +62,7 @@ int SecondLargestElement(int arr[],int n){
 
 int SecondSmallestElement(int arr[],int n){
     int smallest=arr[0];
-    int secondSmallest=-1;
+    int secondSmallest=INT_MAX;
     for(int i=1;i<n;i++){
         if(arr[i]<smallest){
             secondSmallest=smallest;
@@ -95,11 +95,11 @@ int main(){
         cin>>array[i];
     }
 
-    int SecondLargest=SecondLargestElement(array,m);
+    int SecondLargest=SecondLargestElement(array,m); // Time Complexity - O(NlogN)
 
     cout<<"Second Largest -> "<<SecondLargest<<endl;
 
-    int SecondSmallest=SecondSmallestElement(array,m);
+    int SecondSmallest=SecondSmallestElement(array,m); // Time Complexity - O(N)
 
     cout<<"Second Largest -> "<<SecondSmallest;
 }
