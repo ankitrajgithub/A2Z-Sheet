@@ -94,7 +94,7 @@ int main(){
 
 /* 
 Hashing :-
--> Division Method
--> Folding Method
+-> Division Method - {2,3,16,28,139} - arr[i]%10++. If similar then chain it using linked list. {18,28,38,48,......,1008}
+-> Folding Method 
 -> Mid Square Method 
 */
