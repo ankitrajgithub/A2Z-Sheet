@@ -48,7 +48,7 @@ int main(){
 
     cin>>x;
 
-    // rotateArrayByKEelements(arr,n,x); // Time Complexity-O(X+(N-X)+X)=O(N+X) Space Complexity-O(X)
+    // rotateArrayByKEelements(arr,n,x); Time Complexity-O(X+(N-X)+X)=O(N+X) Space Complexity-O(X)
 
     RotateArrayByKEelements(arr,n,x); // O(X+(N-X)+N)=O(2N) Space Complexity-O(1)
 

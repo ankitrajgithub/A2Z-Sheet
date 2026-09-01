@@ -20,3 +20,4 @@ Output:
 Explanation:
 5 is present at the 0th index of the array.
 */
+
