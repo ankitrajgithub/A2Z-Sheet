@@ -41,9 +41,33 @@ void UnionOfTwoSortedArrays(int arr1[],int n,int arr2[],int m){
     int i=0,j=0;
     vector<int> temp;
     while(i<n&&j<m){
-        if(){
-            
+        if(arr1[i]<=arr2[j]){
+            if(temp.size()==0 || temp.back()!=arr1[i]){
+                temp.push_back(arr1[i]);
+            }
+            i++;
+        }else{
+            if(temp.size()==0 || temp.back()!=arr2[j]){
+                temp.push_back(arr2[j]);
+            }
+            j++;
         }
+    }
+    while(i<n){
+        if(temp.size()==0 || temp.back()!=arr1[i]){
+            temp.push_back(arr1[i]);
+        }
+        i++;
+    }
+    while(j<m){
+        if(temp.size()==0 || temp.back()!=arr2[j]){
+            temp.push_back(arr2[j]);
+        }
+        j++;
+    }
+
+    for(int i=0;i<temp.size();i++){
+        cout<<temp[i]<<" ";
     }
 }
 
@@ -65,5 +89,5 @@ int main(){
 
     // unionOfTwoSortedArrays(arr1,n,arr2,m); Time Complexity=O(nLogn+mLogn+n+m), Space Complexity=O(n+m)
 
-    UnionOfTwoSortedArrays(arr1,n,arr2,m);
+    UnionOfTwoSortedArrays(arr1,n,arr2,m); // Time Complexity=O(n+m), Space Complexity=O(n+m)
 }
