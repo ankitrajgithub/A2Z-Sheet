@@ -53,6 +53,18 @@ int FindNumberThatAppearOnceRestTwice(int arr[],int n){
     }
 }
 
+int FindNumbersThatAppearOnceRestTwice(int arr[],int n){
+    map<long long,int> mpp;
+    for(int i=0;i<n;i++){
+        mpp[arr[i]]++;
+    }
+    for(auto el:mpp){
+        if(el.second==1){
+            return el.first;
+        }
+    }
+}
+
 
 int findNumberThatAppearsOnceRestTwice(int arr[],int n){
     int num;
@@ -74,6 +86,8 @@ int main(){
     // int ans=FindNumberThatAppearsOnceRestTwice(arr,n); Time Complexity=O(n^2) Space Complexity=O(1)
 
     // int ans=FindNumberThatAppearOnceRestTwice(arr,n); Time Complexity=O(n+n+n)=O(3n) Space Complexity=O(maxElement)
+
+    // int ans=FindNumbersThatAppearOnceRestTwice(arr,n); Time Complexity=O(nlogm+n/2+1)-(For Unordered Map Best case O(n) and Worst case O(n^2)) Space Complexity-O(n/2+1)
 
     int ans=findNumberThatAppearsOnceRestTwice(arr,n); // Time Complexity=O(n) Space Complexity=O(1)
 
